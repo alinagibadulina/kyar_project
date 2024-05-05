@@ -1,0 +1,97 @@
+%black{
+  background-color: #000;
+}
+%grey{
+  background-color: #666;
+}
+%white{
+  color: white;
+}
+@mixin btn{
+  @extend %grey;
+  @extend %white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+@mixin flex{
+  display: flex;
+  flex: 1;
+}
+@mixin pos{
+  position: relative;
+  overflow: hidden;
+}
+@mixin mrg{
+  margin-top: 0.5em; 
+  margin-bottom: 0.5em;
+}
+@mixin flex-col{
+  flex-direction: column;
+}
+@mixin flex-row{
+  flex-direction: column;
+}
+@mixin img{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+}
+
+.card {
+  @include pos;
+  width: 325px;
+  height: 450px;
+  @extend %black;
+  border-radius: 18px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  @include flex;
+  @include flex-row;
+}
+.poster {
+  @include pos;
+  z-index: 1;
+  bottom: 0;
+  @include img;
+  img {
+    position: absolute;
+    object-fit: cover;
+    @include img;
+  }
+}
+
+.opisanie{
+  @include flex;
+  @include flex-col;
+  margin: 40px;
+  @extend %white;
+  font-size: 20px;
+}
+p{
+  @include mrg;
+}
+h1{
+  @include mrg;
+}
+a{
+  text-decoration: none;
+}
+.button{
+  @include flex-row;
+}
+
+.left-btn{
+  text-align: left;
+  @include btn;
+}
+.right-btn {
+  @include btn;
+  text-align: right;
+}

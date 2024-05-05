@@ -1,0 +1,228 @@
+@font-face{
+    font-family: 'LT_remark';
+    src: url('LT_remark/LTRemark-Regular.otf') format('otf');
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(картинки/фон2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    font-size: 30px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.navbar {
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  text-align: center;
+  box-sizing:border-box;
+}
+
+
+.navbar__item a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.navbar__item a:hover {
+  color: #a61f1f;
+}
+
+.navbar__toggle-btn {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__top {
+    width: 100%;
+  }
+
+  .navbar__list.hidden {
+    display: none;
+  }
+
+
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .navbar__list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar__item {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar__item a {
+    display: block;
+    width: 100%;
+    padding: 10px 0; 
+  }
+}
+.nav {
+    background-color: #666;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+main h1{
+    color: #fff;
+}
+section {
+    flex: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+:root {
+    --gray: #EAEAEC;
+    --primary: #29283F;
+}
+
+.card{
+    display: flex; 
+    flex-wrap: wrap;
+    border-radius: 24px;
+    background-color: white;
+    cursor: pointer; 
+    overflow: hidden;
+    max-width: clamp(320px, 70vw, 980px); 
+    min-width: 320px; 
+    min-height: 280px;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.background {
+    flex: 8 1 350px;
+}
+.background img { 
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.container{
+    margin-top: 20px;
+}
+.content {
+    flex: 3 1 350px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: start;
+    padding: 16px;
+}
+.content > h2 { 
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700; 
+    margin-bottom: clamp(0.35rem, 2vw, 0.55rem);
+}
+content > p {
+    font-size: clamp(1rem, 1.75vw, 1.1rem) ;
+    font-weight: 400; 
+    margin: 6px 0;
+}
+.content a {
+    color: #666;
+}
+.chips {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    padding: 12px 0px 16px 0px;
+}
+.chip {
+    border-radius: 12px;
+    padding: 10px; 
+    font-size: 15px;
+    background-color: #EAEAEC;
+    transition: all 0.35; 
+    font-weight: 500;
+}   
+.action-buttons {
+    border-top: 1px solid #EAEAEC;
+    padding-top: 16px;
+    gap: 12px;
+    display: flex; 
+    margin-top: auto; 
+    flex-wrap: wrap;
+    background-color: #666;
+    color: white;
+    padding: 12px;  
+    text-decoration: none;
+    border-radius: 12px;
+    outline: none; 
+    border: none; 
+    font-size: 18px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    white-space: nowrap;
+    flex: 1 30px; 
+}

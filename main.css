@@ -1,0 +1,274 @@
+@font-face{
+    font-family: 'LT_remark';
+    src: url('LT_remark/LTRemark-Regular.otf') format('otf');
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(картинки/фон2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    font-size: 30px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.navbar {
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  text-align: center;
+  box-sizing:border-box;
+}
+
+.navbar__item a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.navbar__item a:hover {
+  color: #a61f1f;
+}
+
+.navbar__toggle-btn {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__top {
+    width: 100%;
+  }
+
+  .navbar__list.hidden {
+    display: none;
+  }
+
+
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .navbar__list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar__item {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar__item a {
+    display: block;
+    width: 100%;
+    padding: 10px 0; 
+  }
+}
+.nav {
+    background-color: #666;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+main h1{
+    color: #fff;
+}
+section {
+    flex: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0; 
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px 0 0 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.discription{
+    font-size: 25px;
+    color: #fff;
+    text-align: left;
+    margin-top: -10px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    margin: 10px;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.flex-item img {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.flex-item:hover .overlay {
+    opacity: 0;
+}
+.overlay p {
+  color: white;
+}
+
+.container {
+  display:flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: space-between;
+}

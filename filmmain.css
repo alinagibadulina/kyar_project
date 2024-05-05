@@ -1,0 +1,135 @@
+  @font-face{
+    font-family: 'LT_remark';
+    src: url('LT_remark/LTRemark-Regular.otf') format('otf');
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(картинки/фон2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    font-size: 30px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.navbar {
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  text-align: center;
+  box-sizing:border-box;
+}
+
+
+.navbar__item a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.navbar__item a:hover {
+  color: #a61f1f;
+}
+
+.navbar__toggle-btn {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__top {
+    width: 100%;
+  }
+
+  .navbar__list.hidden {
+    display: none;
+  }
+
+
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .navbar__list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar__item {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar__item a {
+    display: block;
+    width: 100%;
+    padding: 10px 0; 
+  }
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+section {
+    flex: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
